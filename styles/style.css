@@ -47,7 +47,6 @@ ol {
   align-items: end;
   align-content: space-between;
   max-width: 1200px;
-  max-height: 800px;
   gap: 30px;
 }
 
@@ -58,8 +57,8 @@ ol {
 
 .result__video-container {
   position: relative;
-  width: 711px;
-  height: 386px;
+  inline-size: 711px;
+  block-size: 386px;
   margin-bottom: 16px;
 }
 
@@ -95,12 +94,13 @@ ol {
   appearance: none;
   min-width: 225px;
   background-color: transparent;
+  font-family: inherit;
   font-weight: inherit;
   font-size: inherit;
   color: inherit;
   padding: 2px;
-  border-top: 1px solid rgba(255, 255, 255, 0.7);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  border-top: 1px solid #fff;;
+  border-bottom: 1px solid #fff;;
   border-right: none;
   border-left: none;
   cursor: text;
@@ -124,19 +124,12 @@ ol {
   color: rgba(255, 255, 255, 0.7);
   font-family: inherit;
   font-weight: 400;
-  font-size: 16px;
+  font-size: inherit;
 }
 
 .search-form__checkbox-list {
   display: flex;
   flex-direction: row;
-}
-
-.search-form__fieldset-title {
-  font-weight: 400;
-  font-size: inherit;
-  color: inherit;
-  margin-bottom: 7px;
 }
 
 .search-form__pseudo-checkbox {
@@ -192,6 +185,7 @@ ol {
 
 .content__details {
   width: 100%;
+  min-width: 399px;;
   height: 100%;
 }
 
@@ -213,7 +207,7 @@ ol {
   position: relative;
   max-width: 399px;
   height: 298px;
-  overflow-x: hidden;
+  overflow-x: auto;
   scrollbar-width: thin;
 }
 
@@ -231,12 +225,12 @@ ol {
   background-color: #545050;
 }
 
-.content__video-card:active {
+.content__card-link:active {
   background-color: #545050;
   text-decoration: none;
 }
 
-.content__video-card:hover {
+.content__card-link:hover {
   text-decoration: underline;
 }
 
@@ -269,13 +263,11 @@ ol {
 
 .content__video-card-title {
   padding-bottom: 6px;
-  padding-top: 5px;
   font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 100%;
   text-transform: uppercase;
-  transform: translateY(-5px);
 }
 
 .content__video-card-description {
@@ -286,14 +278,13 @@ ol {
 
 .button {
   min-width: 194px;
-  height: 34px;
+  min-height: 34px;
   background-color: transparent;
   border: 1px solid #fff;
   color: inherit;
   font-family: inherit;
   font-size: inherit;
   font-weight: 700;
-  
 }
 
 .search-form__submit-button {
